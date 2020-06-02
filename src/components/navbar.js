@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   barLink: {
     color: "white",
+    textDecoration: "none",
   },
   title: {
     display: "none",
@@ -141,16 +142,12 @@ export default function NavBar({ siteTitle }) {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link to="/about/">
-              <Button color="inherit" className={classes.barLink}>
-                About
-              </Button>
+            <Link to="/about/" className={classes.barLink}>
+              <Button color="inherit">About</Button>
             </Link>
 
-            <Link to="/contact/">
-              <Button color="inherit" className={classes.barLink}>
-                Contact
-              </Button>
+            <Link to="/contact/" className={classes.barLink}>
+              <Button color="inherit">Contact</Button>
             </Link>
           </div>
           <div className={classes.sectionMobile}>

@@ -12,9 +12,9 @@ const PostCard = ({ data }) => {
     const ex = node.excerpt.split("।")
     let excerpt = ""
     ex.slice(0, 4).map(line => (excerpt = excerpt + line + "।"))
-    console.log(excerpt)
+    // console.log(excerpt)
     return (
-      <Box marginBottom={2} position="static">
+      <Box marginBottom={2} position="static" key={node.wordpress_id}>
         <Card>
           <Grid container justify="space-evenly" spacing={1}>
             <Grid item xs={12} sm={5} md={4}>
@@ -40,9 +40,9 @@ const PostCard = ({ data }) => {
                     <Typography
                       variant="body2"
                       color="textSecondary"
-                      component="p"
+                      component="div"
                     >
-                      <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+                      <p dangerouslySetInnerHTML={{ __html: excerpt }}></p>
                     </Typography>
                   </CardContent>
                 </Link>

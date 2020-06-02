@@ -8,10 +8,7 @@ const Footer = () => (
     <Box py={2} mt={2} textAlign="center">
       <Typography al>
         © {new Date().getFullYear()}{" "}
-        <Link
-          href="https://banglanewshours.wordpress.com/"
-          style={{ textDecoration: "none" }}
-        >
+        <Link to="/" style={{ textDecoration: "none" }}>
           banglanewshours
         </Link>
       </Typography>
